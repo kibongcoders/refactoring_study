@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 public class BeforeRestaurantService {
 
     public List<Food> foods(Restaurant restaurant){
