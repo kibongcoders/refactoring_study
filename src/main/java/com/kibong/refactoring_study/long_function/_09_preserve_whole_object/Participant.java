@@ -13,4 +13,10 @@ public record Participant(String username, Map<Integer, Boolean> homework) {
     }
 
 
+    double getRate(int totalNumberOfEvents) {
+        long count = homework().values().stream()
+                .filter(v -> v == true)
+                .count();
+        return (double) (count * 100 / totalNumberOfEvents);
+    }
 }

@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class StudyDashboard {
-
+    //이 리팩토링을 적용할 때 주의점은 이 메서드가 파라미터에 의존하고 있는가?를 고려 잘해야한다.
     private final int totalNumberOfEvents;
 
     public StudyDashboard(int totalNumberOfEvents) {
@@ -78,23 +78,16 @@ public class StudyDashboard {
             writer.print(header(participants.size()));
 
             participants.forEach(p -> {
-                String markdownForHomework = getMarkdownForParticipant(p.username(), p.homework());
+                String markdownForHomework = getMarkdownForParticipant(p);
                 writer.print(markdownForHomework);
             });
         }
     }
 
-    double getRate(Map<Integer, Boolean> homework) {
-        long count = homework.values().stream()
-                .filter(v -> v == true)
-                .count();
-        return (double) (count * 100 / this.totalNumberOfEvents);
-    }
-
-    private String getMarkdownForParticipant(String username, Map<Integer, Boolean> homework) {
-        return String.format("| %s %s | %.2f%% |\n", username,
-                checkMark(homework, this.totalNumberOfEvents),
-                getRate(homework));
+    private String getMarkdownForParticipant(Participant participant) {
+        return String.format("| %s %s | %.2f%% |\n", participant.username(),
+                checkMark(participant.homework(), this.totalNumberOfEvents),
+                participant.getRate(this.totalNumberOfEvents));
     }
 
     /**
