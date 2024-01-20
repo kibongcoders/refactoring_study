@@ -13,3 +13,6 @@
 - 여러 함수를 클래스로 묶기 (Combine Functions into Class),여러 함수를 변환 함수로 묶기 (Combine Functions into
 Transform) -> 변수가 사용되는 범위를 제한하는 리팩토링
 - 참조를 값으로 바꾸기(Change Reference to Value) -> 데이터 전체 교체 가능
+
+## 변수 쪼개기(Split Variable)
+어떤 변수가 여러번 재할당 되어도 적절한 경우
