@@ -12,11 +12,10 @@ public class Discount {
     }
 
     public double getDiscountedTotal() {
-        return this.discountedTotal;
+        return this.baseTotal - this.discountedTotal;
     }
 
     public void setDiscount(double number) {
         this.discount = number;
-        this.discountedTotal = this.baseTotal - this.discount;
     }
 }
