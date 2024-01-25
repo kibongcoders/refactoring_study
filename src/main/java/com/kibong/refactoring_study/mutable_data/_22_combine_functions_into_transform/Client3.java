@@ -3,21 +3,15 @@ package com.kibong.refactoring_study.mutable_data._22_combine_functions_into_tra
 import java.time.Month;
 import java.time.Year;
 
-public class Client3 {
+public class Client3 extends ReadingClient{
 
     private double basicChargeAmount;
 
     public Client3(Reading reading) {
-        this.basicChargeAmount = calculateBaseCharge(reading);
+        this.basicChargeAmount = enrichReading(reading).baseCharge();
     }
 
-    private double calculateBaseCharge(Reading reading) {
-        return baseRate(reading.month(), reading.year()) * reading.quantity();
-    }
 
-    private double baseRate(Month month, Year year) {
-        return 10;
-    }
 
     public double getBasicChargeAmount() {
         return basicChargeAmount;
