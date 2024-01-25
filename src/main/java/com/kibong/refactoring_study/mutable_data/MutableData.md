@@ -31,3 +31,5 @@ Transform) -> 변수가 사용되는 범위를 제한하는 리팩토링
 ## 파생 변수를 질의 함수로 바꾸기(Replace Derived Variable with Query)
 - 다른 데이터를 이용해서 만들어진 변수를 변경해주는 것을 줄여주는 리팩토링이다.
 - 파생변수가 변하지 않는 final한 값이라면 리팩토링을 하지 않아도 된다.
+
+## 여러 함수를 클래스로 묶기 (Combine Functions into Class)
