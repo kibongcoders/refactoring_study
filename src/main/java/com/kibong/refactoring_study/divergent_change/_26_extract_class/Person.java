@@ -2,7 +2,7 @@ package com.kibong.refactoring_study.divergent_change._26_extract_class;
 
 public class Person {
 
-    private TelephoneNumber telephoneNumber = new TelephoneNumber();
+    private TelephoneNumber telephoneNumber;
     private String name;
 
     public Person(TelephoneNumber telephoneNumber, String name) {
