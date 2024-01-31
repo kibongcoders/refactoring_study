@@ -3,34 +3,22 @@ package com.kibong.refactoring_study.data_clumps;
 public class Office {
 
     private String location;
+    private TelephoneNumber officeTelephoneNumber;
 
-    private String officeAreCode;
-
-    private String officeNumber;
-
-    public Office(String location, String officeAreCode, String officeNumber) {
+    public Office(String location, TelephoneNumber officeTelephoneNumber) {
         this.location = location;
-        this.officeAreCode = officeAreCode;
-        this.officeNumber = officeNumber;
+        this.officeTelephoneNumber = officeTelephoneNumber;
     }
 
     public String officePhoneNumber() {
-        return officeAreCode + "-" + officeNumber;
+        return officeTelephoneNumber.toString();
     }
 
     public String getOfficeAreCode() {
-        return officeAreCode;
-    }
-
-    public void setOfficeAreCode(String officeAreCode) {
-        this.officeAreCode = officeAreCode;
+        return officeTelephoneNumber.getPersonalAreaCode();
     }
 
     public String getOfficeNumber() {
-        return officeNumber;
-    }
-
-    public void setOfficeNumber(String officeNumber) {
-        this.officeNumber = officeNumber;
+        return officeTelephoneNumber.getPersonalNumber();
     }
 }

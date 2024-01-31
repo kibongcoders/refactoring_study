@@ -3,19 +3,15 @@ package com.kibong.refactoring_study.data_clumps;
 public class Employee {
 
     private String name;
+    private TelephoneNumber employeeTelePhoneNumber;
 
-    private String personalAreaCode;
-
-    private String personalNumber;
-
-    public Employee(String name, String personalAreaCode, String personalNumber) {
+    public Employee(String name, TelephoneNumber employeeTelePhoneNumber) {
         this.name = name;
-        this.personalAreaCode = personalAreaCode;
-        this.personalNumber = personalNumber;
+        this.employeeTelePhoneNumber = employeeTelePhoneNumber;
     }
 
     public String personalPhoneNumber() {
-        return personalAreaCode + "-" + personalNumber;
+        return employeeTelePhoneNumber.toString();
     }
 
     public String getName() {
@@ -27,18 +23,10 @@ public class Employee {
     }
 
     public String getPersonalAreaCode() {
-        return personalAreaCode;
-    }
-
-    public void setPersonalAreaCode(String personalAreaCode) {
-        this.personalAreaCode = personalAreaCode;
+        return employeeTelePhoneNumber.getPersonalAreaCode();
     }
 
     public String getPersonalNumber() {
-        return personalNumber;
-    }
-
-    public void setPersonalNumber(String personalNumber) {
-        this.personalNumber = personalNumber;
+        return employeeTelePhoneNumber.getPersonalNumber();
     }
 }
