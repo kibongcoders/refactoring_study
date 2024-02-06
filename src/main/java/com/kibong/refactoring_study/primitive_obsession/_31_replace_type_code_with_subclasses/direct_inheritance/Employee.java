@@ -2,34 +2,30 @@ package com.kibong.refactoring_study.primitive_obsession._31_replace_type_code_w
 
 import java.util.List;
 
-public class Employee {
+public abstract class Employee {
 
     private String name;
 
-    private String type;
-
-    public Employee(String name, String type) {
-        this.validate(type);
+    public Employee(String name) {
         this.name = name;
-        this.type = type;
     }
 
-    private void validate(String type) {
-        List<String> legalTypes = List.of("engineer", "manager", "salesman");
-        if (!legalTypes.contains(type)) {
-            throw new IllegalArgumentException(type);
-        }
+    public static Employee createEmployee(String name, String type){
+        return switch (type) {
+            case "engineer" -> new Engineer(name);
+            case "manager" -> new Manager(name);
+            case "salesman" -> new Salesman(name);
+            default -> throw new IllegalArgumentException("존재하지 않는 직원 타입 입니다.");
+        };
     }
 
-    public String getType() {
-        return type;
-    }
+    public abstract String getType();
 
     @Override
     public String toString() {
         return "Employee{" +
                 "name='" + name + '\'' +
-                ", type='" + type + '\'' +
+                ", type='" + getType() + '\'' +
                 '}';
     }
 }

@@ -6,12 +6,23 @@ public class Employee {
 
     private String name;
 
-    private String type;
+    private String typeValue;
 
-    public Employee(String name, String type) {
-        this.validate(type);
+    private EmployeeType type;
+
+    public Employee(String name, String typeValue) {
+        this.validate(typeValue);
         this.name = name;
-        this.type = type;
+        this.type = employeeType(typeValue);
+    }
+
+    private EmployeeType employeeType(String typeValue) {
+        return switch (typeValue) {
+            case "engineer" -> new Engineer();
+            case "manager" -> new Manager();
+            case "salesman" -> new Salesman();
+            default -> throw new IllegalArgumentException("존재하지 않는 타입입니다.");
+        };
     }
 
     private void validate(String type) {
@@ -22,14 +33,14 @@ public class Employee {
     }
 
     public String capitalizedType() {
-        return this.type.substring(0, 1).toUpperCase() + this.type.substring(1).toLowerCase();
+        return this.type.capitalizedType();
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "name='" + name + '\'' +
-                ", type='" + type + '\'' +
+                ", type='" + type.toString() + '\'' +
                 '}';
     }
 }
