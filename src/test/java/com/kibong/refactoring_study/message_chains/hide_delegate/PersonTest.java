@@ -12,8 +12,12 @@ class PersonTest {
         Person nick = new Person("nick");
         keesun.setDepartment(new Department("m365deploy", nick));
 
-        Person manager = keesun.getDepartment().getManager();
+        Person manager = getManager(keesun);
         assertEquals(nick, manager);
+    }
+
+    private static Person getManager(Person keesun) {
+        return keesun.getDepartment().getManager();
     }
 
 }
