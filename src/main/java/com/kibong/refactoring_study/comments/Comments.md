@@ -6,3 +6,9 @@
 함수 추출하기(Extract Function) : 설명이 필요한 로직을 별도의 메소드로 빼낸다.
 함수 선언부 변경하기 : 함수 이름 재정의
 Assertion 추가하기 : 어떤 규약이 있는경우 Assertion 추가
+
+## Introduce Assertion(Assertion 추가하기)
+코드를 작성할 때 종종 if나 switch 문으로 조건을 체크하지는 않지만 가정하면서 코드를 작성하는 것이 있다.  
+그런 것들을 Assertion으로 표현해 주면 조금 더 명확하게 코드를 읽을 수 있고 디버깅 할 때에도 유용하게 사용할 수 있다.  
+그리고 Assertion 자체는 항상 True인 경우에만 사용하게 된다.
+
