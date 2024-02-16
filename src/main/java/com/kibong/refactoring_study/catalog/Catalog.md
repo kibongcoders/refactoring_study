@@ -52,3 +52,19 @@ Clauses)
 - 조건부 로직을 다형성으로 바꾸기 (Replace Conditional with Polymorphism) - 동일한 스위치가 여러번? -> 다형성 적용해서 여러개 클래스로
 - 특이 케이스 추가하기 (Introduce Special Case)- 상속 관계로 만들기
 - 어서션 추가하기 (Introduce Assertion)
+
+## API 리팩토링
+우리가 사용하고 있는 프로그래밍 인터페이스, 클래스, 메소드 인터페이스 전부 API이다.
+함수의 선언부를 변경하는 것이 API 리팩토링이다.
+
+- 질의 함수와 변경 함수 분리하기 (Separate Query from Modifier) - 조회와 변경 분리하기
+- 함수 매개변수화하기 (Parameterize Function) - 여러개 함수가 하나의 매개변수마다 다르다면 매개변수를 추가하자
+- 플래그 인수 제거하기 (Remove Flag Argument) - 플래그 성격의 메소드 Argument를 제거
+- 객체 통째로 넘기기 (Preserve Whole Object) 
+- 매개변수를 질의 함수로 바꾸기 (Replace Parameter with Query) - 다른 파라미터를 통해 알 수 있다면 전달하지 않기
+- 질의 함수를 매개변수로 바꾸기 (Replace Query with Parameter) - 함수의 의존성 정도를 컨트롤하는 리팩토링
+- 세터 제거하기 (Remove Setting Method)
+- 생성자를 팩토리 함수로 바꾸기 (Replace Constructor with Factory Function)
+- 함수를 명령으로 바꾸기 (Replace Function with Command) - 일반적임 함수를 쓸거냐 커맨드 패턴으로 바꿀거냐
+- 명령을 함수로 바꾸기 (Replace Command with Function) - 
+
