@@ -34,3 +34,21 @@
 - 반복문 쪼개기 (Split Loop) - 반복문 안에 여러가지 일을 하니 쪼개서 반복문을 사용
 - 반복문을 파이프라인으로 바꾸기 (Replace Loop with Pipeline) - 기능을 없앰
 - 죽은 코드 제거하기 (Remove Dead Code)
+
+## 데이터 조직화
+데이터(변수, 필드)를 다루는 기술
+- 변수 쪼개기 (Split Variable) - 변수 하나도 하나의 용도로 사용하자.
+- 필드 이름 바꾸기 (Rename Field) 
+- 파생 변수를 질의 함수로 바꾸기 (Replace Derived Variable with Query) - 계산할 수 있는 필드는 선언하지 않기 예) 합계
+- 참조를 값으로 바꾸기 (Change References to Value) - 인플로이 대신에 인플로이 이름을 전달하자.
+
+## 조건부 로직 간소화
+복잡한 조건문을 가루는 기술
+
+- 조건문 분해하기 (Decompose Conditional) 
+- 조건식 통합하기 (Consolidate Conditional Expression) - if 문이 있는 경우에 하나의 메서드로 통합하기****
+- 중첩 조건문을 보호 구문으로 바꾸기 (Replace Nested Conditional with Guard
+Clauses)
+- 조건부 로직을 다형성으로 바꾸기 (Replace Conditional with Polymorphism) - 동일한 스위치가 여러번? -> 다형성 적용해서 여러개 클래스로
+- 특이 케이스 추가하기 (Introduce Special Case)- 상속 관계로 만들기
+- 어서션 추가하기 (Introduce Assertion)
