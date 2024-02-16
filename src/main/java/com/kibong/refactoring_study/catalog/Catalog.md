@@ -22,3 +22,15 @@
 - 위임 숨기기(Hide Delegate) 리팩토링을 통해 메서드 체인을 캡슐화 하기도 함
 - 물론 너무 많이 숨겨서 Remove Middleman이라는 리팩토링을 사용하기도 함
 - Substitute Algorithm : 알고리즘 로직 자체를 바꾸는 리팩토링
+
+## 기능 옮기기
+함수나 필드 또는 문장을 적절한 위치로 옮기는 기술
+- 함수 옮기기 (Move Function) - 가장 근본
+- 필드 옮기기 (Move Field) - 가장 근본
+- 문장을 함수로 옮기기 (Move Statements into Function) - 스테이트먼트를 함수로 넣어주기
+- 문장을 호출한 곳으로 옮기기 (Move Statements to Callers) - 위에 것에 반대
+- 인라인 코드를 함수 호출로 바꾸기 (Replace Inline Code with Function Call) - 인라인 코드가 중복되어 사용된다면 함수로 바꾸기
+- 문장 슬라이드하기 (Slide Statements) - Extract Function 하기 전에 사용 되는 리팩토링
+- 반복문 쪼개기 (Split Loop) - 반복문 안에 여러가지 일을 하니 쪼개서 반복문을 사용
+- 반복문을 파이프라인으로 바꾸기 (Replace Loop with Pipeline) - 기능을 없앰
+- 죽은 코드 제거하기 (Remove Dead Code)
