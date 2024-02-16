@@ -68,3 +68,16 @@ Clauses)
 - 함수를 명령으로 바꾸기 (Replace Function with Command) - 일반적임 함수를 쓸거냐 커맨드 패턴으로 바꿀거냐
 - 명령을 함수로 바꾸기 (Replace Command with Function) - 
 
+## 상속 다루기
+
+- 메소드 올리기 (Pull Up Method)
+- 필드 올리기 (Pull Up Field)
+- 생성자 본문 올리기 (Pull Up Constructor Body)
+- 메서드 내리기 (Push Down Method)
+- 필드 내리기 (Push Down Field)
+- 타입 코드를 서브클래스로 바꾸기 (Replace Type Code with Subclasses)
+- 서브클래스 제거하기 (Remove Subclass)
+- 슈퍼클래스 추출하기 (Extract Superclass)
+- 계층 합치기 (Collapse Hierarchy)
+- 서브클래스를 위임으로 바꾸기 (Replace Subclass with Delegate) - 상속 개념자체가 하나밖에 상속을 받지 못하기 때문에 한계가 있다. 그것을 위임으로 해결하는 리팩토링
+- 슈퍼클래스를 위임으로 바꾸기 (Replace Superclass with Delegate)
